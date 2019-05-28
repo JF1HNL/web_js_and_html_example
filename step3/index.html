@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>step3</title>
+  <style>
+    .template {
+      background-color: white;
+      color: red;
+    }
+    .change{
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="template">丸亀製麺</h1>
+  <input type="button" value="文字の色を変える" onclick="color()"><br>
+  <input type="button" value="文字を変える" onclick="char()">
+  <script>
+    const ele = document.querySelector("h1");
+    function color(){
+      if(ele.className === "template"){
+        ele.className = "change"
+      }else{
+        ele.className = "template"
+      }
+    }
+    function char(){
+      if(ele.textContent === "丸亀製麺"){
+        ele.textContent = "まるがめせいめん"
+      }else{
+        ele.textContent = "丸亀製麺"
+      }
+    }
+  </script>
+</body>
+</html>
